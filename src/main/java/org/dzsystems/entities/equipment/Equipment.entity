@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<class-mapping>
+	<class name="org.dzsystems.entities.equipment.Equipment">
+		<id name="id" type="int" column="id" />
+		<attribute name="name" type="java.lang.String" column="name"
+			mandatory="false" />
+		<attribute name="wellId" type="int" column="well_id"
+			mandatory="true" />
+
+		<insert>
+			<sql
+				clause="INSERT INTO EQUIPMENT (id, name, well_id) VALUES (?,?,?)">
+				<attribute name="id" />
+				<attribute name="name" />
+				<attribute name="wellId" />
+			</sql>
+		</insert>
+
+		<update>
+			<sql
+				clause="UPDATE EQUIPMENT SET name = ?, well_id =? WHERE id = ?">
+				<attribute name="name" />
+				<attribute name="wellId" />
+				<attribute name="id" />
+			</sql>
+		</update>
+
+		<delete>
+			<sql clause="DELETE FROM EQUIPMENT WHERE id = ?">
+				<attribute name="id" />
+			</sql>
+		</delete>
+
+	</class>
+</class-mapping>

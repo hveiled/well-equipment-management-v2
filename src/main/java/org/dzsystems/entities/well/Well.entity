@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<class-mapping>
+	<class name="org.dzsystems.entities.well.Well">
+		<id name="id" type="int" column="id" />
+		<attribute name="name" type="java.lang.String" column="name"
+			mandatory="false" />
+
+		<insert>
+			<sql clause="INSERT INTO WELLS (id, name) VALUES (?,?)">
+				<attribute name="id" />
+				<attribute name="name" />
+			</sql>
+		</insert>
+
+		<update>
+			<sql clause="UPDATE WELLS SET name = ? WHERE id = ?">
+				<attribute name="name" />
+				<attribute name="id" />
+			</sql>
+		</update>
+
+		<delete>
+			<sql clause="DELETE FROM WELLS WHERE id = ?">
+				<attribute name="id" />
+			</sql>
+		</delete>
+
+	</class>
+</class-mapping>

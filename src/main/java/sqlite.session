@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="windows-1251" standalone="no"?>
+<SessionConfig>
+	<properties>
+		<property name="driverClassName" value="org.sqlite.JDBC"/>
+		<property name="connectionString" value="jdbc:sqlite:test.db"/>
+		<property name="user" value=""/>
+		<property name="password" value=""/>
+	</properties>
+
+	<mapping id="Equipment">
+		<class name="org.dzsystems.entities.equipment.Equipment"/>
+		<entity name="org/dzsystems/entities/equipment/Equipment.entity"/>
+		<view name="org/dzsystems/entities/equipment/Equipment.view"/>
+	</mapping>
+
+	<mapping id="Well">
+		<class name="org.dzsystems.entities.well.Well"/>
+		<entity name="org/dzsystems/entities/well/Well.entity"/>
+		<view name="org/dzsystems/entities/well/Well.view"/>
+	</mapping>
+
+</SessionConfig>
